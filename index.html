@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="google-site-verification" content="F_DvISJxHeVAQ2ZkqYIrXSE3l2xHBqldBLTDTszqFNA" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toolesh - Free Online Tools</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#0f172a;
+      color:#fff;
+      line-height:1.7;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      background:linear-gradient(135deg,#2563eb,#7c3aed);
+      padding:100px 0;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      width:500px;
+      height:500px;
+      background:rgba(255,255,255,0.08);
+      border-radius:50%;
+      top:-200px;
+      right:-150px;
+    }
+
+    .hero::after{
+      content:'';
+      position:absolute;
+      width:400px;
+      height:400px;
+      background:rgba(255,255,255,0.05);
+      border-radius:50%;
+      bottom:-180px;
+      left:-120px;
+    }
+
+    .hero h1{
+      font-size:52px;
+      margin-bottom:20px;
+      position:relative;
+      z-index:2;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+      color:#e2e8f0;
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-btn{
+      display:inline-block;
+      margin-top:35px;
+      padding:15px 35px;
+      background:#fff;
+      color:#2563eb;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-btn:hover{
+      transform:translateY(-4px);
+      background:#f1f5f9;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:80px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:38px;
+      margin-bottom:10px;
+      color:#fff;
+    }
+
+    .section-title p{
+      color:#cbd5e1;
+      max-width:700px;
+      margin:auto;
+    }
+
+    /* CARDS */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:30px;
+      border-radius:20px;
+      transition:0.4s;
+      border:1px solid rgba(255,255,255,0.05);
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      background:#334155;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#60a5fa;
+      font-size:24px;
+    }
+
+    .card p{
+      color:#cbd5e1;
+      font-size:15px;
+    }
+
+    .card ul{
+      margin-top:15px;
+      padding-left:20px;
+    }
+
+    .card ul li{
+      margin-bottom:10px;
+      color:#e2e8f0;
+    }
+
+    /* TABLE */
+
+    .table-wrapper{
+      overflow-x:auto;
+      margin-top:30px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      background:#1e293b;
+      border-radius:15px;
+      overflow:hidden;
+    }
+
+    table th{
+      background:#2563eb;
+      padding:18px;
+      text-align:left;
+      color:#fff;
+    }
+
+    table td{
+      padding:16px;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+      color:#e2e8f0;
+    }
+
+    table tr:hover{
+      background:#334155;
+    }
+
+    /* FEATURES */
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .feature-box{
+      background:#1e293b;
+      padding:25px;
+      border-radius:18px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .feature-box:hover{
+      background:#2563eb;
+      transform:scale(1.05);
+    }
+
+    .feature-box h4{
+      margin-bottom:10px;
+      font-size:20px;
+    }
+
+    /* CTA */
+
+    .cta{
+      background:linear-gradient(135deg,#7c3aed,#2563eb);
+      padding:80px 20px;
+      border-radius:30px;
+      text-align:center;
+    }
+
+    .cta h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      max-width:750px;
+      margin:auto;
+      color:#e2e8f0;
+    }
+
+    .cta-btn{
+      display:inline-block;
+      margin-top:30px;
+      padding:16px 40px;
+      background:#fff;
+      color:#2563eb;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .cta-btn:hover{
+      background:#f8fafc;
+      transform:translateY(-5px);
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#020617;
+      padding:40px 0;
+      text-align:center;
+      margin-top:80px;
+    }
+
+    footer p{
+      color:#94a3b8;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .section-title h2{
+        font-size:30px;
+      }
+
+      .cta h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container">
+      <h1>All-in-One Free Online Tools Platform</h1>
+      
+
+      <a href="#" class="hero-btn">Explore Free Tools</a>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Why Choose Toolesh?</h2>
+        <p>
+          Toolesh offers fast, secure, and easy-to-use online tools designed for creators,
+          developers, students, and businesses worldwide.<a href="https://toolesh.com/">https://toolesh.com/</a>
+        </p>
+      </div>
+
+      <div class="features">
+
+        <div class="feature-box">
+          <h4>100% Free</h4>
+          <p>All tools are completely free forever.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>No Registration</h4>
+          <p>Use tools instantly without creating an account.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>Lightning Fast</h4>
+          <p>Get instant results with optimized performance.</p>
+        </div>
+
+        <div class="feature-box">
+          <h4>Mobile Friendly</h4>
+          <p>Works perfectly on mobile, tablet, and desktop.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TOOL CATEGORIES -->
+
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Popular Tool Categories</h2>
+        <p>
+          Discover useful tools for writing, downloading, business productivity,
+          security, and web development.
+        </p>
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Content Creation</h3>
+
+          <p>
+            AI-powered writing tools to create engaging and professional content.
+          </p>
+
+          <ul>
+            <li>Facebook Post Generator</li>
+            <li>LinkedIn Post Generator</li>
+            <li>Word Counter</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Security & Privacy</h3>
+
+          <p>
+            Keep your online accounts and personal data secure with smart utilities.
+          </p>
+
+          <ul>
+            <li>Password Generator</li>
+            <li>Random Email Generator</li>
+            <li>Username Generator</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Downloader Tools</h3>
+
+          <p>
+            Download media content quickly and easily in high quality.
+          </p>
+
+          <ul>
+            <li>Instagram Downloader</li>
+            <li>Spotify Downloader</li>
+            <li>VSCO Downloader</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Developer Utilities</h3>
+
+          <p>
+            Essential tools for developers, designers, and technical users.
+          </p>
+
+          <ul>
+            <li>RGB to HEX Converter</li>
+            <li>Keyboard Tester</li>
+            <li>Color Contrast Checker</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TABLE -->
+
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Most Popular Tools</h2>
+        <p>
+          Explore some of the most used free online tools available on Toolesh.
+        </p>
+      </div>
+
+      <div class="table-wrapper">
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>Tool Name</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>Facebook Post Generator</td>
+              <td>Create engaging social media posts instantly.</td>
+            </tr>
+
+            <tr>
+              <td>Instagram Downloader</td>
+              <td>Download reels, photos, and videos easily.</td>
+            </tr>
+
+            <tr>
+              <td>RGB to HEX Converter</td>
+              <td>Convert color codes for web and graphic design.</td>
+            </tr>
+
+            <tr>
+              <td>Barcode Generator</td>
+              <td>Create custom barcodes for businesses.</td>
+            </tr>
+
+            <tr>
+              <td>Word Counter</td>
+              <td>Count words, characters, and sentences quickly.</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+
+  <section>
+    <div class="container">
+
+      <div class="cta">
+
+        <h2>Ready to Boost Your Productivity?</h2>
+
+        <p>
+          Join millions of users who trust Toolesh for fast, secure,
+          and reliable online tools for everyday tasks.
+        </p>
+
+        <a href="#" class="cta-btn">Get Started Now</a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+      <p>
+        © 2026 Toolesh - All Rights Reserved | Free Online Tools Platform
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
